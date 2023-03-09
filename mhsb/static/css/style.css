@@ -1,0 +1,24 @@
+li {
+    list-style: none;
+}
+
+a {
+    list-style: none;
+    float: left;
+    padding: 33px 20px 33px 20px;
+    color: rgb(48, 3, 3);
+    font-family: fantasy;
+}
+
+.header {
+    background-color: rgb(160, 11, 55);
+    height: 90px;
+}
+.header-logo {
+    float: left;
+    font-size: 36px;
+    font-family: fantasy;
+    padding: 20px 200px 20px 40px;
+    color: rgb(48, 3, 3);
+
+}
