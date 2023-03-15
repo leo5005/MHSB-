@@ -1,37 +1,258 @@
+{% extends 'mhsb/base.html'%}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>MHSB ～傀異探究～</title>
-</head>
-<body>
-    <div class='header'>
-        <div class='header-logo'>MHSB ～傀異探究～</div>
-        <div class='header-list'>
-            <ul>
-                <li>
-                    <a href=''>傀異モンスター一覧</a>
-                    <a href=''>傀異錬成報告</a>
-                    <a href=''>投稿</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <main>
-        <div class="container">
-            {% block content %}
-            {% endblock %}
-        </div>
-    </main>
 
-    <footer>
-    </footer>    
-    
-</body>
-</html>
+{% block content %}
+<main role='main' id='main'>
+    <article id='content'>
+        <img src="{% static "mhsb_images/mainfile.jpg" %}" alt="ライゼクス" class="main_img">
+      <div class='list-title'>
+          <h3 id='ex1'>EX★1</h3>
+        <table class='table1'>
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異化オサイズチ</td> <td rowspan='4'>傀異化した皮<br>傀異クエストEX★1<br>傀異討究 ~Lv30<br>傀異化した上皮<br>Lv31~100<br>傀異化した厚皮<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化クルルヤック</td>
+          </tr>
+          <tr>
+            <td>傀異化ドスバキィ</td>
+          </tr>
+          <tr>
+            <td>傀異化ドスロギィ</td>
+          </tr>
+          <tr>
+            <td>傀異化アオアシラ</td> <td rowspan='3'>傀異化した骨<br>傀異クエストEX★1<br>傀異討究 ~Lv30<br>傀異化した堅骨<br>Lv31~100<br>傀異化した重骨<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化ウルクスス</td>
+          </tr>
+          <tr>
+            <td>傀異化ラングロトラ</td>
+          </tr>
+        </table>
+          <h3 id='ex2'>EX★2</h3>  
+        <table class='table2'>
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異化アケノシルム</td> <td rowspan='4'>傀異化した竜骨<br>傀異クエストEX★2<br>傀異討究 ~Lv30<br>傀異化した堅竜骨<br>Lv31~100<br>傀異化した重竜骨<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化バサルモス</td>
+          </tr>
+          <tr>
+            <td>傀異化ボルボロス</td>
+          </tr>
+          <tr>
+            <td>傀異化ロアルドロス</td>
+          </tr>
+          <tr>
+            <td>傀異化ダイミョウザザミ</td> <td rowspan='4'>傀異化した血<br>傀異クエストEX★2<br>傀異討究 ~Lv30<br>傀異化した浄血<br>Lv31~100<br>傀異化した浄濃血<br>Lv101~120</td>
+          </tr>    
+          <tr>
+            <td>傀異化ビシュテンゴ</td>
+          </tr>    
+          <tr>
+            <td>傀異化フルフル</td>
+          </tr> 
+          <tr>
+            <td>傀異化ヨツミワドウ</td>
+          </tr>                               
+        </table>
+          <h3 id='ex3'>EX★3</h3>
+        <table class='table3'>
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異化アンジャナフ</td><td rowspan='4'>傀異化した鱗<br>傀異クエストEX★3<br>傀異討究 ~Lv30<br>傀異化した上鱗<br>Lv31~100<br>傀異化した厚鱗<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化トビカガチ</td>
+          </tr>
+          <tr>
+            <td>傀異化プケプケ</td>
+          </tr>
+          <tr>
+            <td>傀異化リオレイア</td>
+          </tr>
+          <tr>
+            <td>傀異化イソネミクニ</td><td rowspan='4'>傀異化した甲殻<br>傀異クエストEX★3<br>傀異討究 ~Lv30<br>傀異化した堅殻<br>Lv31~100<br>傀異化した重殻<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化ジュラトドス</td>
+          </tr>
+          <tr>
+            <td>傀異化ショウグンギザミ</td>
+          </tr>
+          <tr>
+            <td>傀異化ビシュテンゴ亜種</td>
+          </tr>
+        </table>
+          <h3 id='ex4'>EX★4</h3>
+        <table class='table4'>
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異化イソネミクニ亜種</td><td rowspan='4'>傀異化した爪<br>傀異クエストEX★4<br>傀異化した尖爪<br>傀異討究 Lv31~100<br>傀異化した剛爪<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化オロミドロ</td>
+          </tr>
+          <tr>
+            <td>傀異化ゴシャハギ</td>
+          </tr>
+        <tr>
+          <td>傀異化ヤツカダキ</td>
+          </tr>
+          <tr>
+            <td>傀異化ガランゴルム</td><td rowspan='4'>傀異化した牙<br>傀異クエストEX★4<br>傀異化した鋭牙<br>傀異討究Lv31~100<br>傀異化した重牙<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化ナルガクルガ</td>
+          </tr>
+          <tr>
+            <td>傀異化ベリオロス</td>
+          </tr>
+          <tr>
+            <td>傀異化マガイマガド</td>
+          </tr>
+        </table>
+          <h3 id='ex5'>EX★5</h3>
+        <table class='table'>
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異化ジンオウガ</td><td rowspan='3'>傀異化した凶鱗<br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>傀異化した凶上鱗<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化セルレギオス</td>
+          </tr>
+          <tr>
+            <td>傀異化ディアブロス</td>
+          </tr>
+          <tr>
+            <td>傀異化タマミツネ</td><td rowspan='3'>傀異化した凶骨<br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>傀異化した凶堅骨<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化ライゼクス</td>
+          </tr>
+          <tr>
+            <td>傀異化リオレウス</td>
+          </tr>
+          <tr>
+            <td>傀異化オロミドロ亜種</td><td rowspan='3'>傀異化した凶角<br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>傀異化した凶尖角<br>Lv101~120</td>
+          </tr>
+          <tr>
+            <td>傀異化ティガレックス</td>
+          </tr>
+          <tr>
+            <td>傀異化ルナガロン</td>
+          </tr>
+        </table>
+          <h3 id='ex6'>EX★6</h3>
+        <table>
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異化エスピナス</td><td rowspan='3'>傀異化した凶殻<br>傀異クエストEX★6<br>傀異討究 Lv71~110<br>傀異化した凶堅殻<br>Lv111~120</td>
+          </tr>
+          <tr>
+            <td>傀異化ゴアマガラ</td>
+          </tr>
+          <tr>
+            <td>傀異化バゼルギウス</td>
+          </tr>
+          <tr>
+            <td>傀異化ヤツカダキ亜種</td><td rowspan='2'>傀異化した凶爪<br>傀異クエストEX★6<br>傀異討究 Lv71~Lv110<br>傀異化した凶尖爪<br>Lv111~120</td>
+          </tr>
+          <tr>
+            <td>傀異化ラージャン</td>
+          </tr>
+        </table>
+          <h3 id='ex7'>EX★7</h3>
+        <table>
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異化怨嗟響めくマガイマガド</td><td rowspan='2'>傀異化した凶牙<br>傀異クエストEX★7<br>傀異討究 Lv91~140</td>
+          </tr>
+          <tr>
+            <td>傀異化激昂ラージャン</td>
+          </tr>
+          <tr>
+            <td>傀異化リオレウス希少種</td><td rowspan='2'>傀異化した凶翼膜<br>傀異クエストEX★7<br>傀異討究 Lv91~140</td>
+          </tr>
+          <tr>
+            <td>傀異化リオレイア希少種</td>
+          </tr>
+          <tr>
+            <td>傀異化エスピナス亜種</td><td rowspan='3'>傀異化した凶血<br>傀異クエストEX★7<br>傀異討究 Lv91~140</td>
+          </tr>
+          <tr>
+            <td>傀異化紅蓮滾るバゼルギウス</td>
+          </tr>
+          <tr>
+            <td>傀異化渾沌に呻くゴアマガラ</td>
+          </tr>
+        </table>
+          <h3 id='ex8'>EX★8</h3>
+        <table>  
+          <tr>
+            <th>討伐モンスター</th> <th>入手傀異素材</th>
+          </tr>
+          <tr>
+            <td>傀異克服オオナズチ</td><td rowspan='4'>破傀の堅龍骨<br>傀異クエストEX★8<br>傀異討究 Lv161~220</td>
+          </tr>
+          <tr>
+            <td>傀異克服クシャルダオラ</td>
+          </tr>
+          <tr>
+            <td>傀異克服テオテスカトル</td>
+          </tr>
+          <tr>
+            <td>傀異克服バルファルク</td>
+          </tr>
+        </table>    
+
+       
+        
+      
+
+      </div>       
+    </article>
+
+
+
+
+<aside id='submenu'>
+    <div class='subcontents'>
+    <h3>項目</h3>
+    <ul class='subcontens-lists'>
+        <li><a href='#ex1'>EX★1</a></li>
+        <li><a href='#ex2'>EX★2</a></li>
+        <li><a href='#ex3'>EX★3</a></li>
+        <li><a href='#ex4'>EX★4</a></li>
+        <li><a href='#ex5'>EX★5</a></li>
+        <li><a href='#ex6'>EX★6</a></li>
+        <li><a href='#ex7'>EX★7</a></li>
+        <li><a href='#ex8'>EX★8</a></li>
+        
+    </ul>
+    </div>  
+
+
+</aside>
+</main>    
+
+   
+{% endblock %}
