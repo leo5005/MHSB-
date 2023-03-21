@@ -10,3 +10,7 @@ class RenseiView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'mhsb/rensei.html')
     
+class WeaponView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'mhsb/weapon.html')
+        
