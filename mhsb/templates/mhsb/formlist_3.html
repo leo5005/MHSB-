@@ -1,0 +1,68 @@
+{% extends 'mhsb/form_base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<h1 class='toukou'>狩友募集</h1>
+    <form action="{% url 'form_3' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="formpost">
+            {% render_field form.user class="form-control" placeholder="名前を入力" %}
+        </div>
+        <div class="formpost">
+            {% render_field form.content class="form-control" placeholder="本文を入力" %}
+        </div>
+        <div class="formpost">
+            {{ form.picture }}
+        </div>
+        <br>
+        <button class="btn btn-warning" type="submit">投稿する</button>
+    <br>
+    <br>
+    <br>
+    </form>
+
+    {% if messages %}
+    <div class="container" style="padding:0;">
+        <div class="message">
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success" role="alert">
+                {% elif message.tags == "error" %}
+                    <div class="alert alert-danger" role="alert">
+                {% else %}
+                    <div class="alert alert-info" role="alert">
+                {% endif %}
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+<section>
+    {% for post in post %}
+    <a class="card mb-3"   href="{% url 'post_detail_3' post.pk %}">
+        <div class="row g-0">
+            <div class="col-md-4">
+            {% if post.picture %}
+                <img src="{{ post.picture.url }}" alt="" class="img-fluid rounded-start" width='300px'>
+            {% endif %}   
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-text">{{ post.content }}</p>
+                    <p class="card-text">
+                    <small class="text-muted">{{ post.created }} by {{ post.user }} {{post.pk}}</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</section>
+{% include 'mhsb/pagination_form.html' %}   
+{% endblock %}

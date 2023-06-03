@@ -1,228 +1,250 @@
-{% extends 'mhsb/base.html'%}
+{% extends 'mhsb/base.html' %}
 {% load static %}
 
 
 {% block content %}
 <main role='main' id='main'>
     <article id='content'>
-        <img src="{% static "mhsb_images/mainfile.jpg" %}" alt="ライゼクス" class="main_img">
-      <div class='list-title'>
-          <h3 id='ex1'>EX★1</h3>
+        <img src="{% static "mhsb_images/main2.jpg" %}" alt="ライゼクス" class="main_img">
+        <table class='ex-list'>
+          <tr>
+            <th><a href='#ex1'>EX★1</a></th><th><a href='#ex2'>EX★2</a></th><th><a href='#ex3'>EX★3</a></th><th><a href='#ex4'>EX★4</a></th>
+          </tr>
+          <tr>
+            <td><a href='#ex5'>EX★5</a></td><td><a href='#ex6'>EX★6</a></td><td><a href='#ex7'>EX★7</a></td><td><a href='#ex8'>EX★8</a></td>
+          </tr>
+          <tr>
+            <td><a href='#ex9'>EX★9</a></td><td></td><td></td><td></td>
+          </tr>
+        </table>
+        <div class='list-title'>
+        <h3 id='ex1'>EX★1</h3>
         <table class='table1'>
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th> <th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異化オサイズチ</td> <td rowspan='4'>傀異化した皮<br>傀異クエストEX★1<br>傀異討究 ~Lv30<br>傀異化した上皮<br>Lv31~100<br>傀異化した厚皮<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/osaizuthi.jpg" %}" class='monster_img'><br>傀異化オサイズチ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td><td rowspan='4'>・<font color='#e71f7d'>傀異化した皮</font><br>傀異クエストEX★1<br>傀異討究 ~Lv30<br>・<font color='#DB713E'>傀異化した上皮</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した厚皮</font><br>傀異討究 Lv101~</td>
           </tr>
           <tr>
-            <td>傀異化クルルヤック</td>
+            <td><img src="{% static "mhsb_images/kururu.jpg" %}" class='monster_img'><br>傀異化クルルヤック</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ドスバキィ</td>
+            <td><img src="{% static "mhsb_images/dosbagi.jpg" %}" class='monster_img'><br>傀異化ドスバキィ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ドスロギィ</td>
+            <td><img src="{% static "mhsb_images/dosfuro.jpg" %}" class='monster_img'><br>傀異化ドスロギィ</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化アオアシラ</td> <td rowspan='3'>傀異化した骨<br>傀異クエストEX★1<br>傀異討究 ~Lv30<br>傀異化した堅骨<br>Lv31~100<br>傀異化した重骨<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/aoasira.jpg" %}" class='monster_img'><br>傀異化アオアシラ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td><td rowspan='3'>・<font color='#e71f7d'>傀異化した骨</font><br>傀異クエストEX★1<br>傀異討究 ~Lv30<br>・<font color='#DB713E'>傀異化した堅骨</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した重骨</font><br>傀異討究 Lv101~</td>
           </tr>
           <tr>
-            <td>傀異化ウルクスス</td>
+            <td><img src="{% static "mhsb_images/urukususu.jpg" %}" class='monster_img'><br>傀異化ウルクスス</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ラングロトラ</td>
+            <td><img src="{% static "mhsb_images/ranguro.jpg" %}" class='monster_img'><br>傀異化ラングロトラ</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td>
           </tr>
         </table>
           <h3 id='ex2'>EX★2</h3>  
         <table class='table2'>
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異化アケノシルム</td> <td rowspan='4'>傀異化した竜骨<br>傀異クエストEX★2<br>傀異討究 ~Lv30<br>傀異化した堅竜骨<br>Lv31~100<br>傀異化した重竜骨<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/akeno.jpg" %}" class='monster_img'><br>傀異化アケノシルム</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td><td rowspan='4'>・<font color='#e71f7d'>傀異化した竜骨</font><br>傀異クエストEX★2<br>傀異討究 ~Lv30<br>・<font color='#DB713E'>傀異化した堅竜骨</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した重竜骨</font><br>傀異討究 Lv101~</td>
           </tr>
           <tr>
-            <td>傀異化バサルモス</td>
+            <td><img src="{% static "mhsb_images/basaru.jpg" %}" class='monster_img'><br>傀異化バサルモス</td><td><img src="{% static "mhsb_images/ryu.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ボルボロス</td>
+            <td><img src="{% static "mhsb_images/borubo.jpg" %}" class='monster_img'><br>傀異化ボルボロス</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ロアルドロス</td>
+            <td><img src="{% static "mhsb_images/roaru.jpg" %}" class='monster_img'><br>傀異化ロアルドロス</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ダイミョウザザミ</td> <td rowspan='4'>傀異化した血<br>傀異クエストEX★2<br>傀異討究 ~Lv30<br>傀異化した浄血<br>Lv31~100<br>傀異化した浄濃血<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/daimyo.jpg" %}" class='monster_img'><br>傀異化ダイミョウザザミ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td><td rowspan='4'>・<font color='#e71f7d'>傀異化した血</font><br>傀異クエストEX★2<br>傀異討究 ~Lv30<br>・<font color='#DB713E'>傀異化した浄血</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した浄濃血</font><br>傀異討究 Lv101~</td>
           </tr>    
           <tr>
-            <td>傀異化ビシュテンゴ</td>
+            <td><img src="{% static "mhsb_images/bisyu.jpg" %}" class='monster_img'><br>傀異化ビシュテンゴ</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>    
           <tr>
-            <td>傀異化フルフル</td>
+            <td><img src="{% static "mhsb_images/huruhuru.jpg" %}" class='monster_img'><br>傀異化フルフル</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr> 
           <tr>
-            <td>傀異化ヨツミワドウ</td>
+            <td><img src="{% static "mhsb_images/yothumi.jpg" %}" class='monster_img'><br>傀異化ヨツミワドウ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>                               
         </table>
           <h3 id='ex3'>EX★3</h3>
         <table class='table3'>
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異化アンジャナフ</td><td rowspan='4'>傀異化した鱗<br>傀異クエストEX★3<br>傀異討究 ~Lv30<br>傀異化した上鱗<br>Lv31~100<br>傀異化した厚鱗<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/anzya.jpg" %}" class='monster_img'><br>傀異化アンジャナフ</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td><td rowspan='4'>・<font color='#e71f7d'>傀異化した鱗</font><br>傀異クエストEX★3<br>傀異討究 ~Lv30<br>・<font color='#DB713E'>傀異化した上鱗</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した厚鱗</font><br>傀異討究 Lv101~</td>
           </tr>
           <tr>
-            <td>傀異化トビカガチ</td>
+            <td><img src="{% static "mhsb_images/tobi.jpg" %}" class='monster_img'><br>傀異化トビカガチ</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化プケプケ</td>
+            <td><img src="{% static "mhsb_images/pukepuke.jpg" %}" class='monster_img'><br>傀異化プケプケ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化リオレイア</td>
+            <td><img src="{% static "mhsb_images/rioreia.jpg" %}" class='monster_img'><br>傀異化リオレイア</td><td><img src="{% static "mhsb_images/ryu.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化イソネミクニ</td><td rowspan='4'>傀異化した甲殻<br>傀異クエストEX★3<br>傀異討究 ~Lv30<br>傀異化した堅殻<br>Lv31~100<br>傀異化した重殻<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/isone.jpg" %}" class='monster_img'><br>傀異化イソネミクニ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td><td rowspan='4'>・<font color='#e71f7d'>傀異化した甲殻</font><br>傀異クエストEX★3<br>傀異討究 ~Lv30<br>・<font color='#DB713E'>傀異化した堅殻</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した重殻</font><br>傀異討究 Lv101~</td>
           </tr>
           <tr>
-            <td>傀異化ジュラトドス</td>
+            <td><img src="{% static "mhsb_images/zyura.jpg" %}" class='monster_img'><br>傀異化ジュラトドス</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ショウグンギザミ</td>
+            <td><img src="{% static "mhsb_images/syogun.jpg" %}" class='monster_img'><br>傀異化ショウグンギザミ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ビシュテンゴ亜種</td>
+            <td><img src="{% static "mhsb_images/bisyuasyu.jpg" %}" class='monster_img'><br>傀異化ビシュテンゴ亜種</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td>
           </tr>
         </table>
           <h3 id='ex4'>EX★4</h3>
         <table class='table4'>
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異化イソネミクニ亜種</td><td rowspan='4'>傀異化した爪<br>傀異クエストEX★4<br>傀異化した尖爪<br>傀異討究 Lv31~100<br>傀異化した剛爪<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/isoneasyu.jpg" %}" class='monster_img'><br>傀異化イソネミクニ亜種</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td><td rowspan='4'>・<font color='#e71f7d'>傀異化した爪</font><br>傀異クエストEX★4<br>・<font color='#DB713E'>傀異化した尖爪</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した剛爪</font><br>傀異討究 Lv101~</td>
           </tr>
           <tr>
-            <td>傀異化オロミドロ</td>
+            <td><img src="{% static "mhsb_images/oromi.jpg" %}" class='monster_img'><br>傀異化オロミドロ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ゴシャハギ</td>
+            <td><img src="{% static "mhsb_images/gosya.jpg" %}" class='monster_img'><br>傀異化ゴシャハギ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
         <tr>
-          <td>傀異化ヤツカダキ</td>
+          <td><img src="{% static "mhsb_images/yatsu.jpg" %}" class='monster_img'><br>傀異化ヤツカダキ</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ガランゴルム</td><td rowspan='4'>傀異化した牙<br>傀異クエストEX★4<br>傀異化した鋭牙<br>傀異討究Lv31~100<br>傀異化した重牙<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/garan.jpg" %}" class='monster_img'><br>傀異化ガランゴルム</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td><td rowspan='4'>・<font color='#e71f7d'>傀異化した牙</font><br>傀異クエストEX★4<br>・<font color='#DB713E'>傀異化した鋭牙</font><br>傀異討究 Lv31~100<br>・<font color='#D9512C'>傀異化した重牙</font><br>傀異討究 Lv101~</td>
           </tr>
           <tr>
-            <td>傀異化ナルガクルガ</td>
+            <td><img src="{% static "mhsb_images/naruga.jpg" %}" class='monster_img'><br>傀異化ナルガクルガ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ベリオロス</td>
+            <td><img src="{% static "mhsb_images/berio.jpg" %}" class='monster_img'><br>傀異化ベリオロス</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化マガイマガド</td>
+            <td><img src="{% static "mhsb_images/magai.jpg" %}" class='monster_img'><br>傀異化マガイマガド</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td>
           </tr>
         </table>
           <h3 id='ex5'>EX★5</h3>
-        <table class='table'>
+        <table class='table5'>
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異化ジンオウガ</td><td rowspan='3'>傀異化した凶鱗<br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>傀異化した凶上鱗<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/zinouga.jpg" %}" class='monster_img'><br>傀異化ジンオウガ</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td><td rowspan='3'>・<font color='#8FC2DE'>傀異化した凶鱗</font><br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>・<font color='#3151BF'>傀異化した凶上鱗</font><br>傀異討究 Lv101~160<br>・<font color='#9122C2'>傀異化した凶厚鱗</font><br>傀異討究 Lv161~</td>
           </tr>
           <tr>
-            <td>傀異化セルレギオス</td>
+            <td><img src="{% static "mhsb_images/serure.jpg" %}" class='monster_img'><br>傀異化セルレギオス</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ディアブロス</td>
+            <td><img src="{% static "mhsb_images/dexia.jpg" %}" class='monster_img'><br>傀異化ディアブロス</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化タマミツネ</td><td rowspan='3'>傀異化した凶骨<br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>傀異化した凶堅骨<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/tama.jpg" %}" class='monster_img'><br>傀異化タマミツネ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td><td rowspan='3'>・<font color='#8FC2DE'>傀異化した凶骨</font><br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>・<font color='#3151BF'>傀異化した凶堅骨</font><br>傀異討究 Lv101~160<br>・<font color='#9122C2'>傀異化した凶重骨</font><br>傀異討究 Lv161~</td>
           </tr>
           <tr>
-            <td>傀異化ライゼクス</td>
+            <td><img src="{% static "mhsb_images/raizekusu.jpg" %}" class='monster_img'><br>傀異化ライゼクス</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化リオレウス</td>
+            <td><img src="{% static "mhsb_images/rioreusu.jpg" %}" class='monster_img'><br>傀異化リオレウス</td><td><img src="{% static "mhsb_images/ryu.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化オロミドロ亜種</td><td rowspan='3'>傀異化した凶角<br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>傀異化した凶尖角<br>Lv101~120</td>
+            <td><img src="{% static "mhsb_images/oromiasyu.jpg" %}" class='monster_img'><br>傀異化オロミドロ亜種</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td><td rowspan='3'>・<font color='#8FC2DE'>傀異化した凶角</font><br>傀異クエストEX★5<br>傀異討究 ~Lv100<br>・<font color='#3151BF'>傀異化した凶尖角</font><br>傀異討究 Lv101~160<br>・<font color='#9122C2'>傀異化した凶剛角</font><br>傀異討究 LV161~</td>
           </tr>
           <tr>
-            <td>傀異化ティガレックス</td>
+            <td><img src="{% static "mhsb_images/texiga.jpg" %}" class='monster_img'><br>傀異化ティガレックス</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ルナガロン</td>
+            <td><img src="{% static "mhsb_images/runa.jpg" %}" class='monster_img'><br>傀異化ルナガロン</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
         </table>
           <h3 id='ex6'>EX★6</h3>
         <table>
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異化エスピナス</td><td rowspan='3'>傀異化した凶殻<br>傀異クエストEX★6<br>傀異討究 Lv71~110<br>傀異化した凶堅殻<br>Lv111~120</td>
+            <td><img src="{% static "mhsb_images/esupinasu.jpg" %}" class='monster_img'><br>傀異化エスピナス</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td><td rowspan='3'>・<font color='#8FC2DE'>傀異化した凶殻</font><br>傀異クエストEX★6<br>傀異討究 Lv71~110<br>・<font color='#3151BF'>傀異化した凶堅殻</font><br>傀異討究 Lv111~180<br>・<font color='#9122C2'>傀異化した凶重殻</font><br>傀異討究 Lv181~</td>
           </tr>
           <tr>
-            <td>傀異化ゴアマガラ</td>
+            <td><img src="{% static "mhsb_images/goa.jpg" %}" class='monster_img'><br>傀異化ゴアマガラ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化バゼルギウス</td>
+            <td><img src="{% static "mhsb_images/bazeru.jpg" %}" class='monster_img'><br>傀異化バゼルギウス</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化ヤツカダキ亜種</td><td rowspan='2'>傀異化した凶爪<br>傀異クエストEX★6<br>傀異討究 Lv71~Lv110<br>傀異化した凶尖爪<br>Lv111~120</td>
+            <td><img src="{% static "mhsb_images/yatsuasyu.jpg" %}" class='monster_img'><br>傀異化ヤツカダキ亜種</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td><td rowspan='2'>・<font color='#8FC2DE'>傀異化した凶爪</font><br>傀異クエストEX★6<br>傀異討究 Lv71~Lv110<br>・<font color='#3151BF'>傀異化した凶尖爪</font><br>傀異討究 Lv111~180<br>・<font color='#9122C2'>傀異化した凶剛爪</font><br>傀異討究 Lv181~</td>
           </tr>
           <tr>
-            <td>傀異化ラージャン</td>
+            <td><img src="{% static "mhsb_images/ra-.jpg" %}" class='monster_img'><br>傀異化ラージャン</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>
         </table>
           <h3 id='ex7'>EX★7</h3>
         <table>
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異化怨嗟響めくマガイマガド</td><td rowspan='2'>傀異化した凶牙<br>傀異クエストEX★7<br>傀異討究 Lv91~140</td>
+            <td><img src="{% static "mhsb_images/ensamagado.jpg" %}" class='monster_img'><br>傀異化怨嗟響めくマガイマガド</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td><td rowspan='2'>・<font color='#8FC2DE'>傀異化した凶牙  </font><br>傀異クエストEX★7<br>傀異討究 Lv91~140<br>・<font color='#3151BF'>傀異化した凶鋭牙</font><br>傀異討究 Lv141~200<br>・<font color='#9122C2'>傀異化した凶重牙</font><br>傀異討究 Lv201~</td>
           </tr>
           <tr>
-            <td>傀異化激昂ラージャン</td>
+            <td><img src="{% static "mhsb_images/gekikora-.jpg" %}" class='monster_img'><br>傀異化激昂ラージャン</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化リオレウス希少種</td><td rowspan='2'>傀異化した凶翼膜<br>傀異クエストEX★7<br>傀異討究 Lv91~140</td>
+            <td><img src="{% static "mhsb_images/rioreusukisyo.jpg" %}" class='monster_img'><br>傀異化リオレウス希少種</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td><td rowspan='2'>・<font color='#8FC2DE'>傀異化した凶翼膜</font><br>傀異クエストEX★7<br>傀異討究 Lv91~140<br>・<font color='#3151BF'>傀異化した凶翼  </font><br>傀異討究 Lv141~200<br>・<font color='#9122C2'>傀異化した凶剛翼</font><br>傀異討究 Lv201~</td>
           </tr>
           <tr>
-            <td>傀異化リオレイア希少種</td>
+            <td><img src="{% static "mhsb_images/rioreiakisyo.jpg" %}" class='monster_img'><br>傀異化リオレイア希少種</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化エスピナス亜種</td><td rowspan='3'>傀異化した凶血<br>傀異クエストEX★7<br>傀異討究 Lv91~140</td>
+            <td><img src="{% static "mhsb_images/esupiasyu.jpg" %}" class='monster_img'><br>傀異化エスピナス亜種</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td><td rowspan='3'>・<font color='#8FC2DE'>傀異化した凶血</font><br>傀異クエストEX★7<br>傀異討究 Lv91~140<br>・<font color='#3151BF'>傀異化した凶浄血</font><br>傀異討究 Lv141~200<br>・<font color='#9122C2'>傀異化した凶濃血</font><br>傀異討究 Lv201~</td>
           </tr>
           <tr>
-            <td>傀異化紅蓮滾るバゼルギウス</td>
+            <td><img src="{% static "mhsb_images/gurenbaze.jpg" %}" class='monster_img'><br>傀異化紅蓮滾るバゼルギウス</td><td><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異化渾沌に呻くゴアマガラ</td>
+            <td><img src="{% static "mhsb_images/konton.jpg" %}" class='monster_img'><br>傀異化渾沌に呻くゴアマガラ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'><img src="{% static "mhsb_images/ryu.jpg" %}" class='zokusei_img'></td>
           </tr>
         </table>
           <h3 id='ex8'>EX★8</h3>
         <table>  
           <tr>
-            <th>討伐モンスター</th> <th>入手傀異素材</th>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異克服オオナズチ</td><td rowspan='4'>破傀の堅龍骨<br>傀異クエストEX★8<br>傀異討究 Lv161~220</td>
+            <td><img src="{% static "mhsb_images/kaiinazuthi.jpg" %}" class='monster_img'><br>傀異克服オオナズチ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'></td><td rowspan='3'><br>・<font color='#8FC2DE'>破傀の龍骨</font><br>傀異クエストEX★8<br>傀異討究 Lv111~160<br>・<font color='#3151BF'>破傀の堅龍骨</font><br>傀異討究 Lv161~220<br>・<font color='#9122C2'>破傀の重龍骨</font><br>傀異討究 Lv221~</td>
           </tr>
           <tr>
-            <td>傀異克服クシャルダオラ</td>
+            <td><img src="{% static "mhsb_images/kaiikusya.jpg" %}" class='monster_img'><br>傀異克服クシャルダオラ</td><td><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'></td>
           </tr>
           <tr>
-            <td>傀異克服テオテスカトル</td>
+            <td><img src="{% static "mhsb_images/kaiiteo.jpg" %}" class='monster_img'><br>傀異克服テオテスカトル</td><td><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'></td>
+          </tr>
+        </table>
+          <h3 id='ex9'>EX★9</h3>
+        <div class='ex9_bottom'>
+        <table>  
+          <tr>
+            <th>討伐モンスター</th><th width='10%'>弱点属性</th><th>入手傀異素材</th>
           </tr>
           <tr>
-            <td>傀異克服バルファルク</td>
+            <td><img src="{% static "mhsb_images/varu.jpg" %}" class='monster_img'><br>傀異克服バルファルク</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'><img src="{% static "mhsb_images/mizu.jpg" %}" class='zokusei_img'><img src="{% static "mhsb_images/kaminari.jpg" %}" class='zokusei_img'><img src="{% static "mhsb_images/koori.jpg" %}" class='zokusei_img'></td><td rowspan='2'><br>・<font color='#8FC2DE'>破傀の龍血</font><br>傀異クエストEX★9<br>傀異討究 Lv161~200<br>・<font color='#3151BF'>破傀の浄龍血</font><br>傀異討究 Lv201~240<br>・<font color='#9122C2'>破傀の濃龍血</font><br>傀異討究 Lv241~300</td>
           </tr>
-        </table>    
+          <tr>
+            <td><img src="{% static "mhsb_images/kaiisya.jpg" %}" class='monster_img'><br>傀異克服シャガルマガラ</td><td><img src="{% static "mhsb_images/hi.jpg" %}" class='zokusei_img'><img src="{% static "mhsb_images/ryu.jpg" %}" class='zokusei_img'></td>
+          </tr>
+        </table>
+        </div>    
 
        
         
@@ -234,25 +256,17 @@
 
 
 
-<aside id='submenu'>
-    <div class='subcontents'>
-    <h3>項目</h3>
-    <ul class='subcontens-lists'>
-        <li><a href='#ex1'>EX★1</a></li>
-        <li><a href='#ex2'>EX★2</a></li>
-        <li><a href='#ex3'>EX★3</a></li>
-        <li><a href='#ex4'>EX★4</a></li>
-        <li><a href='#ex5'>EX★5</a></li>
-        <li><a href='#ex6'>EX★6</a></li>
-        <li><a href='#ex7'>EX★7</a></li>
-        <li><a href='#ex8'>EX★8</a></li>
-        
-    </ul>
-    </div>  
+    <aside id='submenu'>
+    
 
+    </aside>
 
-</aside>
-</main>    
+    <aside id="topic">
+      
+  
+    </aside>
+</main> 
+    
 
    
 {% endblock %}

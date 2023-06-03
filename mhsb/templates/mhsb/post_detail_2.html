@@ -1,0 +1,76 @@
+{% extends 'mhsb/form_base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+<h1 class='toukou'>傀異錬成報告</h1>
+    <div class ='deteil_position'>    
+        <section class="mt-5">
+            <div class="card">
+                <div class="card-body">
+                    {% if post.picture %}
+                        <img src="{{ post.picture.url }}" alt="" width='50%'>
+                    {% endif %}   
+                        <div class="card-text">
+                            <span class="fs-6">{{ post.created }}</span>
+                                <p class="fs-6">{{ post.user }}</p>
+                            <div class="mt-5">
+                                {{ post.content }}
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        <form action="{% url 'commentcreate_2' post.pk %}"  method="POST" id="comment-form">
+            {% csrf_token %}
+        <!--特定のフィールドに紐づかないエラーを表示する-->
+            {{ form.non_field_errors }}
+            <!--フォームの各フィールドを取り出す-->
+            {% for field in comment_form %}
+                <div class="field">
+                    {{ field.label_tag }}
+                    {% render_field field class="form-control" %}
+                    {{ field.errors }}
+                </div>
+            {% endfor %}
+            <br>
+            <button class="btn btn-warning" type="submit">コメントする</button>    
+        </form>
+        <br>
+        {% if messages %}
+            <div class="container" style="padding:0;">
+                <div class="message">
+                    {% for message in messages %}
+                        {% if message.tags == "success" %}
+                            <div class="alert alert-success" role="alert">
+                        {% elif message.tags == "error" %}
+                            <div class="alert alert-danger" role="alert">
+                        {% else %}
+                            <div class="alert alert-info" role="alert">
+                        {% endif %}
+                            {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                            </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        <h3 class="comment-title">コメント</h3>
+            <!--コメント-->
+            {% for comment in post_2.comment_2_set.all %}
+            <div class="comment-list">
+                <div class='border-bottom'>{{ comment.user }} {{ comment.created_at }}</div>
+                <!--改行しないようlinebreaksを設定,URL要素に<a>要素を設定-->
+                <div class='mt-2'>{{ comment.message | linebreaks | urlize }}</div>
+            </div>
+            {% empty %}
+            <p>コメントはありません</p>
+            {% endfor %}      
+        </section>
+    </div>
+{% endblock %}

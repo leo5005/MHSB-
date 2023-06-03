@@ -1,0 +1,193 @@
+{% extends 'mhsb/base.html'%}
+{% load static %}
+
+{% block content %}
+
+<main role='main' id='main'>
+    <article id='content'>
+        <img src="{% static "mhsb_images/kyouka.jpg" %}" alt="武器画像" class="kyouka_img">
+        <h3>傀異スロット拡張</h3>
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th>必要素材</th><th width='35%'>解放ボーナス</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td><br>傀異化した浄血 2個<br>傀異化した甲殻 2個<br>傀異化素材 30pts<br><br></td><td>-</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td><br>傀異化した凶鱗 3個<br>傀異化素材 50pts<br><br></td><td>攻撃力 +5</td>
+                </tr>
+                <tr>
+                    <td>Lv3</td><td>傀異化した凶尖爪 2個<br>傀異化した厚鱗 2個<br>傀異化した重牙 2個<br>傀異化素材 100pts</td><td>属性値 +6 or 攻撃力+5</td>
+                </tr>
+                <tr>
+                    <td>Lv4</td><td><br>傀異化した凶剛角 2個<br>傀異化した凶翼 2個<br>傀異化素材 150pts<br><br></td><td>攻撃力 +10</td>
+                </tr>
+                <tr>
+                    <td>Lv5</td><td>傀異化した凶重殻 2個<br>傀異化した凶重骨 2個<br>傀異化した凶浄血 2個<br>傀異化素材 200pts</td><td>切れ味 +10</td>
+                </tr>
+                <tr>
+                    <td>Lv6</td><td><br>傀異化した凶重牙 2個<br>破傀の龍骨 2個<br>傀異化素材 250pts<br><br></td><td>属性値 +12 or 攻撃力 +10</td>
+                </tr>
+                <tr>
+                    <td>Lv7</td><td><br>破傀の濃龍血 2個<br>破傀の重龍骨 2個<br>傀異化素材 300pts<br><br></td><td>攻撃力 +10<br>切れ味 +10</td>
+                </tr>
+            </table>
+        <h3>攻撃力強化</h3>
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th width='10%'>必要スロット</th><th>必要素材</th><th width='35%'>上昇値</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td>2</td><td><br>傀異化した皮 3個<br>傀異化素材 20pts<br><br></td><td>+5</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td>4</td><td><br>傀異化した鋭牙 2個<br>傀異化した牙 2個<br>傀異化素材 40pts<br><br></td><td>+5</td>
+                </tr>
+                <tr>
+                    <td>Lv3</td><td>6</td><td>傀異化した凶尖角 2個<br>傀異化した厚皮 2個<br>傀異化した凶殻 2個<br>傀異化素材 80pts<br></td><td>+5</td>
+                </tr>
+                <tr>
+                    <td>Lv4</td><td>8</td><td><br>傀異化した凶鋭牙 2個<br>傀異化した凶血 2個<br>傀異化素材 120pts<br><br></td><td>+5</td>
+                </tr>
+            </table>
+        <h3>会心率強化</h3>      
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th width='10%'>必要スロット</th><th>必要素材</th><th width='35%'>上昇値</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td>3</td><td><br>傀異化した上皮 2個<br>傀異化した竜骨 2個<br>傀異化素材 30pts<br><br></td><td>+5%</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td>6</td><td><br>傀異化した凶牙 2個<br>傀異化した凶翼膜 2個<br>傀異化素材 120pts<br><br></td><td>+5%</td>
+                </tr>
+                <tr>
+                    <td>Lv3</td><td>8</td><td><br>破傀の龍骨 3個<br>傀異化素材 180pts<br><br></td><td>+5%</td>
+                </tr>
+            </table>
+        <h3>属性強化</h3>
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th width='10%'>必要スロット</th><th>必要素材</th><th width='35%'>上昇値</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td>1</td><td><br>傀異化した骨 3個<br>傀異化素材 10pts<br><br></td><td>+3</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td>2</td><td><br>傀異化した堅竜骨 2個<br>傀異化した鱗 2個<br>傀異化素材 20pts<br><br></td><td>+3</td>
+                </tr>
+                <tr>
+                    <td>Lv3</td><td>3</td><td>傀異化した凶角 2個<br>傀異化した爪 2個<br>傀異化した堅殻 2個<br>傀異化素材 30pts</td><td>+3</td>
+                </tr>
+                <tr>
+                    <td>Lv4</td><td>4</td><td>傀異化した重骨 2個<br>傀異化した浄濃血 2個<br>傀異化した重殻 2個<br>傀異化素材 60pts</td><td>+3</td>
+                </tr>
+                <tr>
+                    <td>Lv5</td><td>5</td><td>傀異化した凶堅殻 2個<br>傀異化した凶上鱗 2個<br>傀異化した剛爪 2個<br>傀異化素材 100pts</td><td>+3</td>
+                </tr>
+                <tr>
+                    <td>Lv6</td><td>6</td><td><br>傀異化した凶重骨 3個<br>傀異化素材 120pts<br><br></td><td>+5</td>
+                </tr>
+                <tr>
+                    <td>Lv7</td><td>7</td><td><br>破傀の堅龍骨 3個<br>傀異化素材 140pts<br><br></td><td>+7</td>
+                </tr>
+                <tr>
+                    <td>Lv8</td><td>8</td><td><br>破傀の浄龍血 3個<br>傀異化素材 160pts<br><br></td><td>+8</td>
+                </tr>
+            </table>
+        <h3>状態異常強化</h3>
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th width='10%'>必要スロット</th><th>必要素材</th><th width='35%'>上昇値</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td>2</td><td><br>傀異化した堅骨 2個<br>傀異化した血 2個<br>傀異化素材 30pts<br><br></td><td>+4</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td>4</td><td>傀異化した凶堅骨 2個<br>傀異化した重竜骨 2個<br>傀異化した凶爪 2個<br>傀異化素材 60pts</td><td>+4</td>
+                </tr>
+                <tr>
+                    <td>Lv3</td><td>6</td><td><br>破傀の龍骨 3個<br>傀異化素材 100pts<br><br></td><td>+4</td>
+                </tr>
+                <tr>
+                    <td>Lv4</td><td>8</td><td><br>破傀の龍血 3個<br>傀異化素材 200pts<br><br></td><td>+4</td>
+                </tr>
+            </table>    
+        <h3>切れ味強化</h3>
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th width='10%'>必要スロット</th><th>必要素材</th><th width='35%'>上昇値</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td>3</td><td><br>傀異化した尖爪 2個<br>傀異化した上鱗 2個<br>傀異化素材 40pts<br><br></td><td>+10</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td>5</td><td><br>傀異化した凶剛爪 2個<br>傀異化した凶厚鱗 2個<br>傀異化素材 200pts<br><br></td><td>+10</td>
+                </tr>
+                <tr>
+                    <td>Lv3</td><td>7</td><td><br>傀異化した凶剛翼 2個<br>破傀の龍骨 2個<br>傀異化素材 300pts<br><br></td><td>+10</td>
+                </tr>
+                <tr>
+                    <td>Lv4</td><td>9</td><td><br>破傀の重龍骨 2個<br>破傀の浄龍血 2個<br>傀異化素材 300pts<br><br></td><td>+20</td>
+                </tr>
+            </table>
+        <h3>砲撃Lv強化</h3>
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th width='10%'>必要スロット</th><th>必要素材</th><th width='35%'>上昇値</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td>2</td><td><br>傀異化した凶鋭牙 2個<br>傀異化した凶浄血 2個<br>傀異化素材 100pts<br><br></td><td>+Lv1</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td>3</td><td><br>傀異化した凶重殻 2個<br>傀異化した凶剛爪 2個<br>傀異化素材 200pts<br><br></td><td>+Lv1</td>
+                </tr>  
+            </table>          
+        <h3>百竜装飾品スロットLv拡張</h3>
+            <div class='last_bottom'>
+            <table>
+                <tr>
+                    <th width='15%'>解放Lv</th><th width='10%'>必要スロット</th><th>必要素材</th><th width='35%'>上昇値</th>
+                </tr>
+                <tr>
+                    <td>Lv1</td><td>4</td><td><br>傀異化した凶骨 3個<br>傀異化素材 50pts<br><br></td><td>+Lv1</td>
+                </tr>
+                <tr>
+                    <td>Lv2</td><td>7</td><td><br>傀異化した凶濃血 2個<br>破傀の堅龍骨 2個<br>傀異化素材 200pts<br><br></td><td>+Lv1</td>
+                </tr>
+            </table>
+            </div>    
+
+
+    </article>
+    <aside id="submenu">
+
+        <div class="subcontents">
+            
+        </div>
+    </aside>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -7,29 +7,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>MHSB ～傀異探究～</title>
 </head>
 <body>
-    <div class='header'>
-        <nav class="navigation">
-            <ul class='navbar'>
-                <li class='current'>MHSB ～傀異探究～</li>
-                    <li><a href='' class='hl'>傀異モンスター一覧</a></li>
-                    <li><a href='' class='hl'>武  器</a></li>
-                    <li><a href='' class='hl'>傀異錬成報告</a></li>
-                    <li><a href='' class='hl'>投  稿</a></li>
-            </ul>
-        </nav>
-    </div>
-    <main>
-        <div class="container">
-            {% block content %}
-            {% endblock %}
+<header class='site-header'>
+    <img src="{% static "mhsb_images/header_img.jpg" %}" alt="header_img" class='header_img'>
+    <div class='header-main'>
+        <h1 class='logo'>MHSB ～傀異探究～</h1>
+    </div> 
+    <div class='header-sub'>     
+        <div class="gnavi__wrap">
+            <ul class="gnavi__lists"> 
+                <li class="gnavi__list"><a href='/'>傀異モンスター一覧</a></li>
+                <li class="gnavi__list"><a href="{% url 'weapon' %}">武  器</a></li>
+                <li class="gnavi__list"><a href="{% url 'sousyoku' %}">装飾品</a></li>
+                <li class="gnavi__list"><a href="{% url 'kyouka' %}">武器傀異強化</a></li>
+                <li class="gnavi__list">
+                    <a href="{% url 'formlist_1' %}">掲示板</a>
+                    <ul class="dropdown__lists">
+                        <li class="dropdown__list"><a href="{% url 'formlist_1' %}">神おま報告</a></li>
+                        <li class="dropdown__list"><a href="{% url 'formlist_2' %}">傀異錬成報告</a></li>
+                        <li class="dropdown__list"><a href="{% url 'formlist_3' %}">狩友募集</a></li>
+                        <li class="dropdown__list"><a href="{% url 'formlist_4' %}">雑  談</a></li>
+                    </ul>
+                </li>      
+            </ul>       
         </div>
-    </main>
+    </div>
+    <div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        <div class="menu-content">
+            <ul class="menu-list">
+                <li>
+                    <a href="/">傀異モンスター一覧</a>
+                </li>
+                <li>
+                    <a href="{% url 'weapon' %}">武  器</a>
+                </li>
+                <li>
+                    <a href="{% url 'sousyoku' %}">装飾品</a>
+                </li>
+                <li>
+                    <a href="{% url 'kyouka' %}">武器傀異強化</a>
+                </li>
+                <li>
+                    <a href="{% url 'formlist_1' %}">掲示板</a>        
+                </li>
+            </ul>
+            <ul class = 'menu-list-list'>
+                <li><a href="{% url 'formlist_1' %}">・神おま報告</a></li>
+                <li><a href="{% url 'formlist_2' %}">・傀異錬成報告</a></li>
+                <li><a href="{% url 'formlist_3' %}">・狩友募集</a></li>
+                <li><a href="{% url 'formlist_4' %}">・雑  談</a></li>
+            </ul>
+        </div>
+    </div>
+    
+</header>    
+    
+      
+{% block content %}
+{% endblock %}
+        
+   
 
-    <footer>
-    </footer>    
+<footer>
+        
+</footer>    
     
 </body>
 </html>
