@@ -1,2 +1,6 @@
-Django~=2.2.10
+Django~=4.1.7
+python~=3.9.12
+HTML/CSS
 django-widget-tweaks~=1.4.8
+bootstrap4
+javascript
