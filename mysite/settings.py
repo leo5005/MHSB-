@@ -16,7 +16,8 @@ SECRET_KEY = 'd7s4=xvh@p7lksbs5ag#(!fh6@pwy23zh6a&i@wp3g)((%%iue'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'mhsb-kt.herokuapp.com'
+    'mhsb-kt.herokuapp.com',
+    '127.0.0.1',
 ]
 
 
