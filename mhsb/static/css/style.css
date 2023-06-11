@@ -496,6 +496,14 @@ th,td {
         order: 3;
         width: 5%;
     }
+
+    .logo {
+        padding: 50px 0 10px 15px;
+        font-size: 20px;
+        color: white;
+        margin-left: 0;
+    
+    }
     
     .hamburger-menu {
         display: block;
@@ -577,7 +585,7 @@ th,td {
     .menu-content ul li a {
         display: block;
         width: 100%;
-        font-size: 13px;
+        font-size: 80%;
         box-sizing: border-box;
         color:#ffffff;
         text-decoration: none;
