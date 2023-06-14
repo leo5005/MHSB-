@@ -433,7 +433,7 @@ th,td {
 
 .menu-content {
     width: 100%;
-    height: 68%;
+    height: 490px;
     position: fixed;
     top: 0;
     left: 100%;
@@ -572,7 +572,7 @@ th,td {
         transition: all 0.5s;
     }
     #menu-btn-check:checked ~ .menu-content {
-        left: 57%;/*メニューを画面内へ*/
+        left: 50%;/*メニューを画面内へ*/
     }
     .menu-list{
         padding: 70px 0 0 10px;
@@ -585,7 +585,7 @@ th,td {
     .menu-content ul li a {
         display: block;
         width: 100%;
-        font-size: 80%;
+        font-size: 70%;
         box-sizing: border-box;
         color:#ffffff;
         text-decoration: none;
