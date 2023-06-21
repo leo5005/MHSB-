@@ -246,7 +246,7 @@ th,td {
 
 .gnavi__wrap {
     margin: auto;
-    max-width: 1150px;
+    max-width: 1100px;
     height: 60px;
     padding :0;
 }
@@ -262,7 +262,7 @@ th,td {
     background-color: rgb(197, 236, 243);
     transition: all .3s;
     list-style:none;
-    width: 230px;
+    width: 220px;
     display: grid;
     place-items: center;
 }
@@ -280,14 +280,14 @@ th,td {
     transition: all .3s;
 }
 .gnavi__list:hover::before {
-    background-color: #3584bb;
+    background-color: #0071BB;
 }
 .gnavi__list a {
     display: flex;
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: #1b4059;
+    color: #2f3336;
     font-size: 15px;
     letter-spacing: 0.05em;
     font-weight: 600;
@@ -301,7 +301,7 @@ th,td {
 
 .dropdown__lists {
     display: none;/*デフォルトでは非表示の状態にしておく*/
-    width: 223px;
+    width: 212px;
     position: absolute;
     list-style:none;
 }
@@ -323,13 +323,13 @@ th,td {
     content: "";
     width: 100%;
     height: 1px;
-    background-color: #3584bb;
+    background-color: #0071BB;
     position: absolute;
     top: 0;
     left: 0;
 }
 .dropdown__list:hover {
-    background-color: #3584bb;
+    background-color: #0071BB;
 }
 .dropdown__list a {
     display: flex;
@@ -478,135 +478,132 @@ th,td {
 }
 
 @media screen and (max-width: 700px) {
-    .gnavi__wrap {
-        display: none;
-    }
+.gnavi__wrap {
+    display: none;
+}
         
-    #submenu {
-        order: 1;
-        width: 5%;
-    }
+#submenu {
+    order: 1;
+    width: 5%;
+}
         
-    #content {
-        order:2;
-        width: 90%;
-    }
+#content {
+    order:2;
+    width: 90%;
+}
         
-    #topic {
-        order: 3;
-        width: 5%;
-    }
+#topic {
+    order: 3;
+    width: 5%;
+}
 
-    .logo {
-        padding: 50px 0 10px 15px;
-        font-size: 20px;
-        color: white;
-        margin-left: 0;
+.logo {
+    padding: 50px 0 10px 15px;
+    font-size: 20px;
+    color: white;
+    margin-left: 0;
+}
     
-    }
-    
-    .hamburger-menu {
-        display: block;
-    }
+.hamburger-menu {
+    display: block;
+}
 
-    .zokusei_img {
-        width: 70%;
-    }
+.zokusei_img {
+    width: 70%;
+}
     
-    .menu-btn {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        height: 50px;
-        width: 50px;
-        justify-content: center;
-        align-items: center;
-        z-index: 90;
-        background-color: #3584bb;
-        bottom: 0;
-    }
-    .menu-btn span,
-    .menu-btn span:before,
-    .menu-btn span:after {
-        content: '';
-        display: block;
-        height: 3px;
-        width: 25px;
-        border-radius: 3px;
-        background-color: #ffffff;
-        position: absolute;
-    }
-    .menu-btn span:before {
-        bottom: 8px;
-    }
-    .menu-btn span:after {
-        top: 8px;
-    }
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #3584bb;
+    bottom: 0;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
     
-    #menu-btn-check:checked ~ .menu-btn span {
-        background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
-    }
-    #menu-btn-check:checked ~ .menu-btn span::before {
-        bottom: 0;
-        transform: rotate(45deg);
-    }
-    #menu-btn-check:checked ~ .menu-btn span::after {
-        top: 0;
-        transform: rotate(-45deg);
-    }
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+    
+#menu-btn-check {
+    display: none;
+}
+    
+.menu-content {
+    width: 100%;
+    height: 435px;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #3584bb;
+    transition: all 0.5s;
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 50%;/*メニューを画面内へ*/
+}
+.menu-list{
+    padding: 70px 0 0 10px;
+    margin-bottom: 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 70%;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 10px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
     
     
-    #menu-btn-check {
-        display: none;
-    }
-    
-    .menu-content {
-        width: 100%;
-        height: 435px;
-        position: fixed;
-        top: 0;
-        left: 100%;
-        z-index: 80;
-        background-color: #3584bb;
-        transition: all 0.5s;
-    }
-    #menu-btn-check:checked ~ .menu-content {
-        left: 50%;/*メニューを画面内へ*/
-    }
-    .menu-list{
-        padding: 70px 0 0 10px;
-        margin-bottom: 0;
-    }
-    .menu-content ul li {
-        border-bottom: solid 1px #ffffff;
-        list-style: none;
-    }
-    .menu-content ul li a {
-        display: block;
-        width: 100%;
-        font-size: 70%;
-        box-sizing: border-box;
-        color:#ffffff;
-        text-decoration: none;
-        padding: 9px 10px 10px 0;
-        position: relative;
-    }
-    .menu-content ul li a::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        border-top: solid 2px #ffffff;
-        border-right: solid 2px #ffffff;
-        transform: rotate(45deg);
-        position: absolute;
-        right: 11px;
-        top: 16px;
-    }
-    
-    
-    }
-    
+}
     
 
 .menu-list-list {
