@@ -1,6 +1,5 @@
 from django.urls import path
 from mhsb import views
-
 urlpatterns = [
     path('', views.HomeView.as_view(), name='index'),
     path('mhsb/weapon/', views.WeaponView.as_view(), name='weapon'),
@@ -21,5 +20,5 @@ urlpatterns = [
     path('mhsb/formlist_1/', views.FormListView_1, name='formlist_1'),
     path('mhsb/formlist_2/', views.FormListView_2, name='formlist_2'),
     path('mhsb/formlist_3/', views.FormListView_3, name='formlist_3'),
-    path('mhsb/formlist_4/', views.FormListView_4, name='formlist_4'),
+    path('mhsb/formlist_4/', views.FormListView_4, name='formlist_4'), 
 ]

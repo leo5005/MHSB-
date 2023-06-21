@@ -13,7 +13,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd7s4=xvh@p7lksbs5ag#(!fh6@pwy23zh6a&i@wp3g)((%%iue'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'mhsb-kt.herokuapp.com',
@@ -34,10 +34,18 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'mhsb',
     'widget_tweaks',
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hrqrobpr7',
+    'API_KEY': '814381716483635',
+    'API_SECRET': 'QliaqGFCJ8BWdf_0C5Whh_oMjkU'
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -119,12 +127,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, "static"),
-# )
+STATICFILES_DIRS = (
+#os.path.join(BASE_DIR, 'static'),
+)
+STATIC_ROOT = os.path.join(BASE_DIR, 'mhsb/static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

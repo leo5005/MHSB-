@@ -37,7 +37,7 @@ def FormListView_1(request):
     context = {
         'form': form,
         'page_obj': page_obj,
-        'post' : page_obj.object_list,
+        'post_list' : page_obj.object_list,
     }
 
     return render(request, 'mhsb/formlist_1.html', context)
@@ -60,8 +60,8 @@ def FormCreate_1(request):
     ctx = {"form": form}
     if request.POST:
         if form.is_valid():
-            post = form.cleaned_data
-            obj = Post_1(**post)
+            post_list = form.cleaned_data
+            obj = Post_1(**post_list)
             obj.save()
             messages.success(request, '投稿しました')
             return redirect("formlist_1")
@@ -120,7 +120,7 @@ def FormListView_2(request):
     context = {
         'form': form,
         'page_obj': page_obj,
-        'post' : page_obj.object_list,
+        'post_list' : page_obj.object_list,
     }
 
     return render(request, 'mhsb/formlist_2.html', context) 
@@ -143,8 +143,8 @@ def FormCreate_2(request):
     ctx = {"form": form}
     if request.POST:
         if form.is_valid():
-            post = form.cleaned_data
-            obj = Post_2(**post)
+            post_list = form.cleaned_data
+            obj = Post_2(**post_list)
             obj.save()
             messages.success(request, '投稿しました')
             return redirect("formlist_2")
@@ -204,7 +204,7 @@ def FormListView_3(request):
     context = {
         'form': form,
         'page_obj': page_obj,
-        'post' : page_obj.object_list,
+        'post_list' : page_obj.object_list,
     }
 
     return render(request, 'mhsb/formlist_3.html', context) 
@@ -229,8 +229,8 @@ def FormCreate_3(request):
     ctx = {"form": form}
     if request.POST:
         if form.is_valid():
-            post = form.cleaned_data
-            obj = Post_3(**post)
+            post_list = form.cleaned_data
+            obj = Post_3(**post_list)
             obj.save()
             messages.success(request, '投稿しました')
             return redirect("formlist_3")
@@ -289,7 +289,7 @@ def FormListView_4(request):
     context = {
         'form': form,
         'page_obj': page_obj,
-        'post' : page_obj.object_list,
+        'post_list' : page_obj.object_list,
     }
 
     return render(request, 'mhsb/formlist_4.html', context) 
@@ -314,8 +314,8 @@ def FormCreate_4(request):
     ctx = {"form": form}
     if request.POST:
         if form.is_valid():
-            post = form.cleaned_data
-            obj = Post_4(**post)
+            post_list = form.cleaned_data
+            obj = Post_4(**post_list)
             obj.save()
             messages.success(request, '投稿しました')
             return redirect("formlist_4")

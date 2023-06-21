@@ -3,6 +3,7 @@
 {% load widget_tweaks %}
 
 {% block content %}
+<button type="button" onclick="history.back()">戻る</button>
 <h1 class='toukou'>傀異錬成報告</h1>
     <form action="{% url 'form_2' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
@@ -44,7 +45,7 @@
     {% endif %}
 
 <section>
-    {% for post in post %}
+    {% for post in post_list %}
     <a class="card mb-3"   href="{% url 'post_detail_2' post.pk %}">
         <div class="row g-0">
             <div class="col-md-4">
@@ -64,5 +65,8 @@
     </a>
     {% endfor %}
 </section>
+<button class="btn btn-primary" onclick="history.back(-1)">戻る</button>
+<br>
+<br>
 {% include 'mhsb/pagination_form.html' %} 
 {% endblock %}
