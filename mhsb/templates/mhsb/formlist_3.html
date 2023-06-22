@@ -3,7 +3,6 @@
 {% load widget_tweaks %}
 
 {% block content %}
-<button type="button" onclick="history.back()">戻る</button>
 <h1 class='toukou'>狩友募集</h1>
     <form action="{% url 'form_3' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}

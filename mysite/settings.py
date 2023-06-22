@@ -1,3 +1,4 @@
+import environ
 import os
 from django.contrib.messages import constants as messages
 
@@ -40,12 +41,6 @@ INSTALLED_APPS = [
     'mhsb',
     'widget_tweaks',
 ]
-
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hrqrobpr7',
-    'API_KEY': '814381716483635',
-    'API_SECRET': 'QliaqGFCJ8BWdf_0C5Whh_oMjkU'
-}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,6 +121,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
 #os.path.join(BASE_DIR, 'static'),
@@ -137,3 +135,9 @@ MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': env('CLOUDINARY_NAME'),
+    'API_KEY': env('CLOUDINARY_API_KEY'),
+    'API_SECRET': env('CLOUDINARY_API_SECRET'),
+}
