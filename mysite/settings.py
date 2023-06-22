@@ -77,10 +77,19 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
+
+# postgreSQL
+
+#DATABASES = {
+#    'default': env.db(),
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -121,9 +130,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-env = environ.Env()
-env.read_env(os.path.join(BASE_DIR, '.env'))
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
 #os.path.join(BASE_DIR, 'static'),
@@ -137,7 +143,7 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': env('CLOUDINARY_NAME'),
+    'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': env('CLOUDINARY_API_KEY'),
     'API_SECRET': env('CLOUDINARY_API_SECRET'),
 }

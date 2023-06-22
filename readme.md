@@ -46,3 +46,17 @@
 - ### BootStrap4
 
 - ### Widget-Tweaks
+
+## 変更 6/22
+
+- 不要なフォルダを削除しました。
+
+### temptatesフォルダ
+
+- formlist.html, post_detail.html に戻るボタンを追加しました。
+- formlist.html にて {% for post in post %} の部分を {% for post in post_list %}に変更しました。
+
+### settings.py
+
+- DEBUG = False にしました。
+- 本番環境の画像アップロード用にCloudinaryを使用するようにし、設定を記載しました。
