@@ -56,7 +56,7 @@
 - formlist.html, post_detail.html に戻るボタンを追加しました。
 - formlist.html にて {% for post in post %} の部分を {% for post in post_list %}に変更しました。
 
-### settings.py
+### myseite/settingsフォルダ
 
-- DEBUG = False にしました。
+- 開発環境用と本番環境用のsettingsファイルを用意しました
 - 本番環境の画像アップロード用にCloudinaryを使用するようにし、設定を記載しました。
