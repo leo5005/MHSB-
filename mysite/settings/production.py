@@ -26,4 +26,5 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': env('CLOUDINARY_API_SECRET'),
 }
 
+
 DATABASES = {'default': dj_database_url.config(conn_max_age=600, ssl_require=True)}
