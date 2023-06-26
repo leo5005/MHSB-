@@ -24,7 +24,7 @@ MESSAGE_TAGS = {
 env = environ.Env()
 env.read_env('.env')
 
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.environ['SECRET_KEY']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
