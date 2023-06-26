@@ -1,4 +1,5 @@
 import os
+import environ
 from django.contrib.messages import constants as messages
 
 
@@ -18,6 +19,12 @@ MESSAGE_TAGS = {
     messages.DEBUG: 'dark',
     messages.ERROR: 'danger',
 }
+
+
+env = environ.Env()
+env.read_env('.env')
+
+SECRET_KEY = env('SECRET_KEY')
 
 INSTALLED_APPS = [
     'django.contrib.admin',

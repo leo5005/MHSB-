@@ -7,7 +7,7 @@ DEBUG = False
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 
-ALLOWED_HOSTS = ['mhsb-kt.herokuapp.com',]
+ALLOWED_HOSTS = ['mhsb-kt.herokuapp.com']
 
 DATABASES = {
     'default': env.db(),

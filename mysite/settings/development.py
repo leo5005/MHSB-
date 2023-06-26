@@ -1,11 +1,13 @@
 from .base import *
 import os
+import environ
 
 ALLOWED_HOSTS = ['*']
 
 DEBUG = True
 
-SECRET_KEY = 'd7s4=xvh@p7lksbs5ag#(!fh6@pwy23zh6a&i@wp3g)((%%iue'
+env = environ.Env()
+env.read_env('.env')
 
 DATABASES = {
     'default': {
