@@ -47,16 +47,16 @@
 
 - ### Widget-Tweaks
 
-## 変更 6/22
+## 変更 6/26
 
 - 不要なフォルダを削除しました。
 
-### temptatesフォルダ
+### templatesフォルダ
 
-- formlist.html, post_detail.html に戻るボタンを追加しました。
+- post_detail.html に’投稿一覧に戻るボタン’を追加しました。
 - formlist.html にて {% for post in post %} の部分を {% for post in post_list %}に変更しました。
 
-### myseite/settingsフォルダ
+### mysite/settingsフォルダ
 
 - 開発環境用と本番環境用のsettingsファイルを用意しました
 - 本番環境の画像アップロード用にCloudinaryを使用するようにし、設定を記載しました。
