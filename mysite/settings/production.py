@@ -11,6 +11,7 @@ env.read_env(os.path.join(BASE_DIR, '.env'))
 
 ALLOWED_HOSTS = ['mhsb-kt.herokuapp.com']
 
+
 DATABASE_URL = os.environ['DATABASE_URL']
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
@@ -24,6 +25,7 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME': env('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': env('CLOUDINARY_API_KEY'),
     'API_SECRET': env('CLOUDINARY_API_SECRET'),
+    'SECURE': True,
 }
 
 
