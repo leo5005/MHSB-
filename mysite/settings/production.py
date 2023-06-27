@@ -9,14 +9,15 @@ DEBUG = False
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 
-ALLOWED_HOSTS = ['mhsb-kt.herokuapp.com']
+#ALLOWED_HOSTS = ['mhsb-kt.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
-DATABASE_URL = os.environ['DATABASE_URL']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+#DATABASE_URL = os.environ['DATABASE_URL']
+#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
-#DATABASES = {
-#    'default': env.db(),
-#}
+DATABASES = {
+    'default': env.db(),
+}
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
